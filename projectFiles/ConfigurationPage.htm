@@ -17,7 +17,7 @@
             <div class="attribute-container" id="attributelist">
                 <div class="form-group">
                     <label id="attrlabel">Attribute 1: </label>
-                    <input type="text" value="Attribute Name" onchange="alert(this.value)" style="font-size: 30px;" /> <br />
+                    <input type="text" value="Attribute Name" onchange="updateAttributeNamesInLocalStorage();" style="font-size: 30px;" /> <br />
                     <button onclick="removeItem(this)">X</button>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     \
                     <div class="form-group"> \
                     <label id="attrlabel"> Attribute ' + numberOfNewForm + ': </label > \
-                    <input type="text" value="Attribute Name" onchange="alert(this.value)" style="font-size: 30px;" /> <br /> \
+                    <input type="text" value="Attribute Name" onchange="updateAttributeNamesInLocalStorage();" style="font-size: 30px;" /> <br /> \
                     <button onclick="removeItem(this)">X</button> \
                     </div> \
                     \
@@ -50,14 +50,24 @@
             var children = document.getElementById("attributelist").children; // Identify the list of form groups
             buttonelement.parentNode.remove(); // Delete form group the user selected for deletion
             for (var i = 0; i < children.length; i++) { // Loop through all active form groups
-                console.log(children[i]); // Console log each form group
                 children[i].querySelector("label").innerHTML = 'Attribute ' + (i + 1); // Change the label associated with the input fields
+                console.log(children[i]); // Console log each form group
                 console.log(children[i].querySelector("input").value); // Console log the input values
-                userChosenAttributeName = children[i].querySelector("input").value; // Store the user-chosen attribute names to add them to local storage. Updated every loop.
                 console.log(children[i].querySelector("label")); // Console log the label
-                localStorage.setItem("attributeName" + (i+1), userChosenAttributeName) // Store user-chosen attribute names in local storage.
+            }
+            updateAttributeNamesInLocalStorage();
+        }
+    </script>
+
+    <script type="text/javascript">
+        function updateAttributeNamesInLocalStorage() {
+            var children = document.getElementById("attributelist").children;
+            for (var i = 0; i < children.length; i++) {
+                userChosenAttributeName = children[i].querySelector("input").value;
+                localStorage.setItem("attributeName" + (i + 1), userChosenAttributeName)
             }
         }
+
     </script>
 
 
