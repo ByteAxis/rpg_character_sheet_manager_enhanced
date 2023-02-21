@@ -52,7 +52,10 @@
             for (var i = 0; i < children.length; i++) { // Loop through all active form groups
                 console.log(children[i]); // Console log each form group
                 children[i].querySelector("label").innerHTML = 'Attribute ' + (i + 1); // Change the label associated with the input fields
+                console.log(children[i].querySelector("input").value); // Console log the input values
+                userChosenAttributeName = children[i].querySelector("input").value; // Store the user-chosen attribute names to add them to local storage. Updated every loop.
                 console.log(children[i].querySelector("label")); // Console log the label
+                localStorage.setItem("attributeName" + (i+1), userChosenAttributeName) // Store user-chosen attribute names in local storage.
             }
         }
     </script>
