@@ -49,11 +49,14 @@
         function removeItem(buttonelement) {
             var children = document.getElementById("attributelist").children; // Identify the list of form groups
             buttonelement.parentNode.remove(); // Delete form group the user selected for deletion
+            localStorage.removeItem("attributeName" + (children.length + 1)); // Remove attribute storage for now-out-of-range attribute key.
             for (var i = 0; i < children.length; i++) { // Loop through all active form groups
                 children[i].querySelector("label").innerHTML = 'Attribute ' + (i + 1); // Change the label associated with the input fields
+                /*
                 console.log(children[i]); // Console log each form group
                 console.log(children[i].querySelector("input").value); // Console log the input values
                 console.log(children[i].querySelector("label")); // Console log the label
+                */
             }
             updateAttributeNamesInLocalStorage();
         }
