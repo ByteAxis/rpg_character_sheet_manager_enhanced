@@ -9,19 +9,21 @@
 </head>
 
 
-<body>
+<body onload="loadAttributesFromStorage();">
     <div class="flex-row">
         <div class="flex-column">
             <button onclick="addAttribute(); updateAttributeNamesInLocalStorage();" style="font-size: 30px; width: 250px;">Add Attribute</button>
-
             <div class="attribute-container" id="attributelist">
-                <div class="form-group">
-                    <label id="attrlabel">Attribute 1: </label>
-                    <input type="text" value="Attribute Name" onchange="updateAttributeNamesInLocalStorage();" style="font-size: 30px;" /> <br />
-                    <button onclick="removeItem(this)">X</button>
+                <!-- THIS NEEDS TO BE REPLACED WITH LOCAL STORAGE-BASED LOADING
+    <div class="form-group">
+        <label id="attrlabel">Attribute 1: </label>
+        <input type="text" value="Attribute Name" onchange="updateAttributeNamesInLocalStorage();" style="font-size: 30px;" /> <br />
+        <button onclick="removeItem(this)">X</button>
                 </div>
+                THIS NEEDS TO BE REPLACED WITH LOCAL STORAGE-BASED LOADING -->
             </div>
-        </div>
+                      
+            </div>
         <a href="CharacterSheetPage.htm" style="align-self: start;">Go to character sheet</a>
     </div>
 
@@ -67,10 +69,37 @@
             var children = document.getElementById("attributelist").children;
             for (var i = 0; i < children.length; i++) {
                 userChosenAttributeName = children[i].querySelector("input").value;
-                localStorage.setItem("attributeName" + (i + 1), userChosenAttributeName)
+                localStorage.setItem("attributeName" + (i + 1), userChosenAttributeName);
             }
         }
 
+    </script>
+
+    <script type="text/javascript">
+        function loadAttributesFromStorage() {
+            var i = 1;
+            while (localStorage.getItem("attributeName" + i, i) !== null) { // While "attributeName{i}" exists,
+                loadAttributeFormElement("attributeName" + i, i); // Load the item
+                i++; // And increment i by 1.
+            }
+        }
+    </script>
+
+    <script>
+        function loadAttributeFormElement(attributeNameKey, attributeIndex) {
+            // This will be called by LoadAttributesFromStorage
+            var elementLabel = localStorage.getItem(attributeNameKey)
+
+            $(".attribute-container").append('\
+                    \
+                    <div class="form-group"> \
+                    <label id="attrlabel">' + "Attribute " + attributeIndex + ': </label > \
+                    <input type="text" value="' + elementLabel + '"onchange="updateAttributeNamesInLocalStorage();" style="font-size: 30px;" /> <br /> \
+                    <button onclick="removeItem(this)">X</button> \
+                    </div> \
+                    \
+                    ')
+        }
     </script>
 
 
