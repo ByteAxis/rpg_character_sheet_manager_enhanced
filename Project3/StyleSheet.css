@@ -1,0 +1,105 @@
+h1 {
+    font-size: 100px;
+}
+h2 {
+    font-size: 55px;
+}
+
+button {
+    font-size: 50px;
+}
+
+a {
+    font-size: 40px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    background-color: dodgerblue;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+.flex-row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: dodgerblue;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.flex-row-grid {
+    display: grid;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    background-color: dodgerblue;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.flex-container > div {
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.form-group >
+
+body {
+    background-color: white;
+}
+
+label {
+    width: 150px;
+    text-align: center;
+}
+
+input {
+    font-size: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+input[type=checkbox] {
+    border: 20px;
+    width: 100%;
+    height: 58px;
+    accent-color: red;
+}
+
+input[type=text] {
+    width: 250px;
+}
+
+.flex-row > input {
+    margin-right: 20px;
+}
+
+.flex-row-wrap > input {
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.flex-row-wrap > label {
+    margin-top: 30px;
+}
+
+label {
+    font-size: 30px;
+    padding: 25px;
+    background-color: mediumaquamarine
+}

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="js">
+      <UniqueIdentifier>{e9b17772-e15b-42f6-8541-45445e89795d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="css">
+      <UniqueIdentifier>{0d9d919c-8702-478a-aa00-d46007fca9ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CharacterSheetPage.htm" />
+    <None Include="ConfigurationPage.htm" />
+    <None Include="javascriptfile.js">
+      <Filter>js</Filter>
+    </None>
+    <None Include="jquery-3.6.3.js">
+      <Filter>js</Filter>
+    </None>
+    <None Include="StyleSheet.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.bundle.js">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.bundle.js.map">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.bundle.min.js">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.bundle.min.js.map">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.esm.js">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.esm.js.map">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.esm.min.js">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.esm.min.js.map">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.js">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.js.map">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.min.js">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\js\bootstrap.min.js.map">
+      <Filter>js</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-grid.rtl.min.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-reboot.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-reboot.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-reboot.min.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-reboot.min.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-reboot.rtl.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-reboot.rtl.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-reboot.rtl.min.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-reboot.rtl.min.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-utilities.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-utilities.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-utilities.min.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-utilities.min.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-utilities.rtl.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-utilities.rtl.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-utilities.rtl.min.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-utilities.rtl.min.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap.min.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap.min.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap.rtl.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap.rtl.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap.rtl.min.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap.rtl.min.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-grid.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-grid.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-grid.min.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-grid.min.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-grid.rtl.css">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-grid.rtl.css.map">
+      <Filter>css</Filter>
+    </None>
+    <None Include="..\..\..\..\Downloads\bootstrap-5.3.0-alpha1-dist\bootstrap-5.3.0-alpha1-dist\css\bootstrap-grid.rtl.min.css">
+      <Filter>css</Filter>
+    </None>
+  </ItemGroup>
+</Project>

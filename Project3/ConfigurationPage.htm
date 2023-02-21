@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <script type="text/javascript" src="jquery-3.6.3.js"></script>
+    <meta charset="utf-8" />
+    <title>Configuration</title>
+</head>
+
+
+<body>
+    <div class="flex-row">
+        <div class="flex-column">
+            <button onclick="addAttribute();" style="font-size: 30px; width: 250px;">Add Attribute</button>
+
+            <div class="attribute-container" id="attributelist">
+                <div class="form-group">
+                    <label id="attrlabel">Attribute 1: </label>
+                    <input type="text" value="Attribute Name" style="font-size: 30px;" /> <br />
+                    <button onclick="removeItem(this)">X</button>
+                </div>
+            </div>
+        </div>
+        <a href="CharacterSheetPage.htm" style="align-self: start;">Go to character sheet</a>
+    </div>
+
+
+    <script type="text/javascript">
+        function addAttribute() {
+
+            var formgroup = document.getElementById("attributelist");
+            var numberOfForms = formgroup.children.length;
+            var numberOfNewForm = numberOfForms + 1;
+
+            $(".attribute-container").append('\
+                    \
+                    <div class="form-group"> \
+                    <label id="attrlabel"> Attribute ' + numberOfNewForm + ': </label > \
+                    <input type="text" value="Attribute Name" style="font-size: 30px;" /> <br /> \
+                    <button onclick="removeItem(this)">X</button> \
+                    </div> \
+                    \
+                    ')
+        }
+    </script>
+
+    <script type="text/javascript">
+        function removeItem(buttonelement) {
+            var children = document.getElementById("attributelist").children;
+            // The index of button's parent in var 'children' shall be stored
+            buttonelement.parentNode.remove();
+            for (var i = 0; i < children.length; i++) {
+                console.log(children[i]);
+                children[i].querySelector("label").innerHTML = 'Attribute ' + (i + 1);
+                console.log(children[i].querySelector("label"));
+            }
+
+            return 
+
+        }
+    </script>
+
+
+</body>
+
+</html>

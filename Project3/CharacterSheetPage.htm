@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <meta charset="utf-8" />
+    <title>Character Sheet</title>
+</head>
+
+<body>
+    <div class="flex-row">
+        <!-- Contains the columns-->
+        <div class="flex-column">
+            <!-- Section 1: Contains header and (Attributes and Skills) -->
+            <h2>Stats and skills:</h2>
+
+            <div class="flex-row">
+                <!-- Contains (attributes and skills) -->
+
+                <div class="flex-column">
+
+                    <!-- [Column 1] Contains attributes -->
+                    <label>Attribute 1:</label> <br />
+                    <input type="number" id="attr1" name="attr1" value="0" /> <br />
+
+                    <label>Attribute 2:</label> <br />
+                    <input type="number" id="attr2" name="attr2" value="0" /> <br />
+
+                    <label>Attribute 3:</label> <br />
+                    <input type="number" id="attr3" name="attr3" value="0" /> <br />
+
+                    <label>Attribute 4:</label> <br />
+                    <input type="number" id="attr4" name="attr4" value="0" /> <br />
+
+                    <label>Attribute 5:</label> <br />
+                    <input type="number" id="attr5" name="attr5" value="0" /> <br />
+
+                    <label>Attribute 6:</label> <br />
+                    <input type="number" id="attr6" name="attr6" value="0" /> <br />
+                </div>
+
+                <div class="flex-column">
+                    <!-- [Column 2] Contains skills -->
+                    <label>Skill 1:</label> <br />
+                    <input type="checkbox" id="skill1" name="skill1" /> <br />
+
+                    <label>Skill 2:</label> <br />
+                    <input type="checkbox" id="skill2" name="skill2" /> <br />
+
+                    <label>Skill 3:</label> <br />
+                    <input type="checkbox" id="skill3" name="skill3" /> <br />
+
+                    <label>Skill 4:</label> <br />
+                    <input type="checkbox" id="skill4" name="skill4" /> <br />
+
+                    <label>Skill 5:</label> <br />
+                    <input type="checkbox" id="skill5" name="skill5" /> <br />
+
+                    <label>Skill 6:</label> <br />
+                    <input type="checkbox" id="skill6" name="skill6" /> <br />
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-column">
+            <!-- [Section 2] All character info & resistances -->
+            <h1> Character Info: </h1>
+            <div class="flex-row">
+                <!-- [Section 2 Column 1 / Row 1] Contains general character info -->
+                <div class="form-group">
+                    <label>Current HP: </label> <br />
+                    <input type="number" id="currenthp" name="currenthp" value="0" /> <br />
+                </div>
+                <div class="form-group">
+                    <label>Max HP: </label> <br />
+                    <input type="number" id="maxhp" name="maxhp" value="0" /> <br />
+                </div>
+                <div class="form-group">
+                    <label>AC: </label> <br />
+                    <input type="number" id="ac" name="ac" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Level: </label> <br />
+                    <input type="number" id="level" name="level" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Class: </label> <br />
+                    <input type="text" id="class" name="class" /> <br />
+                </div>
+                <!-- [Section 2 Column 1 / Row 1 End] -->
+            </div>
+
+            <h2>Physical Resistances: </h2>
+            <div class="flex-row">
+                <!-- [Section 2 Column 1 / Row 2] Contains physical resistances and armor info -->
+
+                <div class="form-group">
+                    <label>Slash Resist: </label> <br />
+                    <input type="number" id="slashresist" name="slashresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Pierce Resist: </label> <br />
+                    <input type="number" id="pierceresist" name="pierceresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Bludgeon Resist: </label> <br />
+                    <input type="number" id="bludgeonresist" name="bludgeonresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Dodge Chance: </label> <br />
+                    <input type="number" id="dodgechance" name="dodgechance" value="0" /> <br />
+                </div>
+                <!-- [Section 2 Column 1 / Row 2 End] -->
+            </div>
+
+            <h2> Elemental Resistances:</h2>
+            <div class="flex-row-wrap" style="padding-bottom: 800px;">
+                <!-- [Section 2 Column 1 / Row 3] Contains magical/elemental resistances -->
+                <!-- acid bludgeoning cold fire force lightning necrotic piercing poison psychic radiant slashing thunder -->
+                <div class="form-group">
+                    <label>Fire Resist:</label> <br />
+                    <input type="number" id="fireresist" name="fireresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Cold Resist:</label> <br />
+                    <input type="number" id="coldresist" name="coldresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Lightning Resist:</label> <br />
+                    <input type="number" id="lightningresist" name="lightningresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Poison Resist:</label> <br />
+                    <input type="number" id="poisonresist" name="poisonresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Psychic Resist:</label> <br />
+                    <input type="number" id="psychic resist" name="psychicresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Radiant Resist:</label> <br />
+                    <input type="number" id="radiantresist" name="radiantresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Force Resist:</label> <br />
+                    <input type="number" id="forceresist" name="forceresist" value="0" /> <br />
+                </div>
+
+                <div class="form-group">
+                    <label>Necrotic Resist:</label> <br />
+                    <input type="number" id="necroticresist" name="necroticresist" value="0" /> <br />
+                </div>
+
+            </div>
+
+            <!-- [Section 2 Column 1 / End] -->
+        </div>
+        <!-- Section 2 / End]-->
+        <a href="ConfigurationPage.htm">Go To Configuration Page</a>
+    </div>
+
+    
+</body>
+</html>
