@@ -3,11 +3,12 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="StyleSheet.css" />
+    <script type="text/javascript" src="jquery-3.6.3.js"></script>
     <meta charset="utf-8" />
     <title>Character Sheet</title>
 </head>
 
-<body>
+<body onload="displayAttributesFromStorage();">
     <div class="flex-row">
         <!-- Contains the columns-->
         <div class="flex-column">
@@ -19,24 +20,10 @@
 
                 <div class="flex-column">
 
-                    <!-- [Column 1] Contains attributes -->
-                    <label>Attribute 1:</label> <br />
-                    <input type="number" id="attr1" name="attr1" value="0" /> <br />
+                    <div class="attribute-container" id="attributelist">
+                        <!-- [Column 1] Contains attributes -->
 
-                    <label>Attribute 2:</label> <br />
-                    <input type="number" id="attr2" name="attr2" value="0" /> <br />
-
-                    <label>Attribute 3:</label> <br />
-                    <input type="number" id="attr3" name="attr3" value="0" /> <br />
-
-                    <label>Attribute 4:</label> <br />
-                    <input type="number" id="attr4" name="attr4" value="0" /> <br />
-
-                    <label>Attribute 5:</label> <br />
-                    <input type="number" id="attr5" name="attr5" value="0" /> <br />
-
-                    <label>Attribute 6:</label> <br />
-                    <input type="number" id="attr6" name="attr6" value="0" /> <br />
+                    </div>
                 </div>
 
                 <div class="flex-column">
@@ -170,6 +157,39 @@
         <a href="ConfigurationPage.htm">Go To Configuration Page</a>
     </div>
 
-    
+    <script type="text/javascript">
+        function displayAttributesFromStorage() {
+            var i = 1;
+            while (localStorage.getItem("attributeName" + i) !== null) { // While "attributeName{i}" exists,
+                if (localStorage.getItem("attributeValue" + i) !== null) {
+                    var attributeVal = (localStorage.getItem("attributeValue" + i)); // I wonder if this can leave scope.
+                } else {
+                    attributeVal = 0;
+                    updateAttributeValuesInLocalStorage();
+                }
+                $(".attribute-container").append('\
+                    \
+                    <div class="form-group"> \
+                    <label id="attrlabel">' + localStorage.getItem("attributeName" + i) + ': </label > \
+                    <input type="text" value=' + attributeVal + ' onchange="updateAttributeValuesInLocalStorage();" style="font-size: 30px;" /> <br /> \
+                    </div> \
+                    \
+                    ');
+                i++; // Increment i by 1
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        function updateAttributeValuesInLocalStorage() {
+            var children = document.getElementById("attributelist").children;
+            for (var i = 0; i < children.length; i++) {
+                userChosenAttributeValue = children[i].querySelector("input").value;
+                localStorage.setItem("attributeValue" + (i + 1), userChosenAttributeValue);
+            }
+        }
+
+    </script>
 </body>
 </html>
