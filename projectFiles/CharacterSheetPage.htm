@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="StyleSheet.css" />
     <script type="text/javascript" src="jquery-3.6.3.js"></script>
+    <script type="text/javascript" src="javascriptfile.js"></script>
     <meta charset="utf-8" />
     <title>Character Sheet</title>
 </head>
@@ -157,39 +158,5 @@
         <a href="ConfigurationPage.htm">Go To Configuration Page</a>
     </div>
 
-    <script type="text/javascript">
-        function displayAttributesFromStorage() {
-            var i = 1;
-            while (localStorage.getItem("attributeName" + i) !== null) { // While "attributeName{i}" exists,
-                if (localStorage.getItem("attributeValue" + i) !== null) {
-                    var attributeVal = (localStorage.getItem("attributeValue" + i)); // I wonder if this can leave scope.
-                } else {
-                    attributeVal = 0;
-                    updateAttributeValuesInLocalStorage();
-                }
-                $(".attribute-container").append('\
-                    \
-                    <div class="form-group"> \
-                    <label id="attrlabel">' + localStorage.getItem("attributeName" + i) + ': </label > \
-                    <input type="text" value=' + attributeVal + ' onchange="updateAttributeValuesInLocalStorage();" style="font-size: 30px;" /> <br /> \
-                    </div> \
-                    \
-                    ');
-                i++; // Increment i by 1
-            }
-        }
-    </script>
-
-
-    <script type="text/javascript">
-        function updateAttributeValuesInLocalStorage() {
-            var children = document.getElementById("attributelist").children;
-            for (var i = 0; i < children.length; i++) {
-                userChosenAttributeValue = children[i].querySelector("input").value;
-                localStorage.setItem("attributeValue" + (i + 1), userChosenAttributeValue);
-            }
-        }
-
-    </script>
 </body>
 </html>
