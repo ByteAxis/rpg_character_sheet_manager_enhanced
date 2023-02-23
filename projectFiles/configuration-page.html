@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <link rel="stylesheet" href="css/StyleSheet.css" />
+    <link rel="stylesheet" href="css/style-sheet.css" />
     <script type="text/javascript" src="js/jquery-3.6.3.js"></script>
     <script type="text/javascript" src="js/attrFunctions.js"></script>
     <script type="text/javascript" src="js/skillFunctions.js"></script>
@@ -14,11 +14,11 @@
 <body onload="loadAttributesFromStorage(); loadSkillsFromStorage();">
     <div class="flex-row" style="align-items: start;">
         <div class="flex-column">
-            <button class="adder-button" onclick="addAttribute(); updateAttributeNamesInLocalStorage();" style="font-size: 30px; width: 250px;">Add Attribute</button>
+            <button class="adder-button" onclick="addAttribute(); updateAttributeNamesInLocalStorage();">Add Attribute</button>
             <div class="attribute-container" id="attributelist"></div>
         </div>
         <div class="flex-column">
-            <button class="adder-button" onclick="addSkill(); updateSkillNamesInLocalStorage();" style="font-size: 30px; width: 250px;">Add Skill</button>
+            <button class="adder-button" onclick="addSkill(); updateSkillNamesInLocalStorage();">Add Skill</button>
             <div class="skill-container" id="skilllist"></div>
         </div>
         <a href="character-sheet.html" style="align-self: start;">Go to character sheet</a>
