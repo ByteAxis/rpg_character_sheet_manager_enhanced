@@ -40,6 +40,7 @@ function displaySkillsFromStorage() {
             <div class="form-group"> \
             <label id="skilllabel">' + localStorage.getItem("skillName" + i) + ': </label > \
             <input type="checkbox" ' + setChecked + ' onchange="updateSkillValuesInLocalStorage();" style="margin-top:10px; height:60px; width:60px; margin-left: 20px;" /> <br /> \
+            <input type="checkbox" value=' + skillValue + ' onchange="updateSkillValuesInLocalStorage();" style="margin-top:10px; bottom; height:60px; width:60px; margin-left: 20px;"/> <br /> \
             </div> \
             \
             ');
