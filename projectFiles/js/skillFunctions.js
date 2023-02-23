@@ -48,7 +48,7 @@ function addSkill() {
             \
             <div class="form-group"> \
             <label id="skill-label"> Skill ' + numberOfNewForm + ': </label > \
-            <input type="text" value="Skill Name" onchange="updateSkillNamesInLocalStorage();" style="font-size: 30px;" /> <br /> \
+            <input class="skill-input" type="text" value="Skill Name" onchange="updateSkillNamesInLocalStorage();" /> <br /> \
             <button onclick="removeSkill(this)">X</button> \
             </div> \
             \
@@ -107,7 +107,7 @@ function loadSkillsFromStorage() {
             \
             <div class="form-group"> \
             <label id="skill-label">' + "Skill " + i + ': </label > \
-            <input type="text" value="' + localStorage.getItem("skillName" + i) + '"onchange="updateSkillNamesInLocalStorage();" style="font-size: 30px;" /> <br /> \
+            <input class="skill-input" type="text" value="' + localStorage.getItem("skillName" + i) + '"onchange="updateSkillNamesInLocalStorage();" /> <br /> \
             <button onclick="removeSkill(this)">X</button> \
             </div> \
             \

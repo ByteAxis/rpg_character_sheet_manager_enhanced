@@ -23,7 +23,7 @@ a {
     flex-direction: row;
     background-color: dodgerblue;
     width: fit-content;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     margin: 40px;
 }
@@ -71,6 +71,22 @@ label {
 .skill-label {
     font-size:40px;
     width: 200px;
+}
+
+.skill-input {
+    font-size: 30px;
+}
+
+.attribute-input {
+    font-size: 30px;
+}
+
+.attribute-label {
+    font-size: 50px;
+}
+.attribute-value-input {
+    font-size: 60px;
+    width: 130px;
 }
 
 input {

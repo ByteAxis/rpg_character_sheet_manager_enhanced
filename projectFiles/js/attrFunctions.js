@@ -10,8 +10,8 @@ function displayAttributesFromStorage() {
         $(".attribute-container").append('\
             \
             <div class="form-group"> \
-            <label id="attrlabel" style="font-size: 50px;">' + localStorage.getItem("attributeName" + i) + ': </label > \
-            <input type="number" value=' + attributeVal + ' onchange="updateAttributeValuesInLocalStorage();" style="font-size: 60px; width: 130px;" /> <br /> \
+            <label class="attribute-label" id="attrlabel">' + localStorage.getItem("attributeName" + i) + ': </label > \
+            <input class="attribute-value-input" type="number" value=' + attributeVal + ' onchange="updateAttributeValuesInLocalStorage();" /> <br /> \
             </div> \
             \
             ');
@@ -37,7 +37,7 @@ function addAttribute() {
             \
             <div class="form-group"> \
             <label id="attrlabel"> Attribute ' + numberOfNewForm + ': </label > \
-            <input type="text" value="Attribute Name" onchange="updateAttributeNamesInLocalStorage();" style="font-size: 30px;" /> <br /> \
+            <input class="attribute-input" type="text" value="Attribute Name" onchange="updateAttributeNamesInLocalStorage();" /> <br /> \
             <button onclick="removeAttr(this)">X</button> \
             </div> \
             \
@@ -95,7 +95,7 @@ function loadAttributesFromStorage() {
             \
             <div class="form-group"> \
             <label id="attrlabel">' + "Attribute " + i + ': </label > \
-            <input type="text" value="' + localStorage.getItem("attributeName" + i) + '"onchange="updateAttributeNamesInLocalStorage();" style="font-size: 30px;" /> <br /> \
+            <input class="attribute-input" type="text" value="' + localStorage.getItem("attributeName" + i) + '"onchange="updateAttributeNamesInLocalStorage();" /> <br /> \
             <button onclick="removeAttr(this)">X</button> \
             </div> \
             \
