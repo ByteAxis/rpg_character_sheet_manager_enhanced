@@ -30,17 +30,18 @@ function displaySkillsFromStorage() {
             updateSkillValuesInLocalStorage(); // In case skillValue is null, set it to false and sync storage
         }
 
+
         if (skillValue == "true") {
             setChecked = "checked";
         } else {
             setChecked = "";
         }
+
         $(".skill-container").append('\
             \
             <div class="form-group"> \
             <label id="skilllabel">' + localStorage.getItem("skillName" + i) + ': </label > \
             <input type="checkbox" ' + setChecked + ' onchange="updateSkillValuesInLocalStorage();" style="margin-top:10px; height:60px; width:60px; margin-left: 20px;" /> <br /> \
-            <input type="checkbox" value=' + skillValue + ' onchange="updateSkillValuesInLocalStorage();" style="margin-top:10px; bottom; height:60px; width:60px; margin-left: 20px;"/> <br /> \
             </div> \
             \
             ');
@@ -56,9 +57,21 @@ function updateAttributeValuesInLocalStorage() {
     }
 }
 
+function updateSkillValuesInLocalStorage() {
+    var children = document.getElementById("skilllist").children;
+    for (var i = 0; i < children.length; i++) {
+        if (children[i].querySelector("input").checked) {
+            localStorage.setItem("skillValue" + (i + 1), true);
+        } else {
+            localStorage.setItem("skillValue" + (i + 1), false);
+        }
 
     }
 }
+
+
+
+
 
 function addAttribute() {
 
@@ -92,6 +105,10 @@ function addSkill() {
             \
             ')
 }
+
+
+
+
 
 function destroyAttr(buttonelement) { // Parallel data continuity achieved.
     // The steps for execution should be: 1. Delete the element marked for deletion | 2. Shift all displaced elements toward index 1 | 3. De-allocate unused memory
