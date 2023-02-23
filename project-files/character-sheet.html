@@ -6,11 +6,12 @@
     <script type="text/javascript" src="js/jquery-3.6.3.js"></script>
     <script type="text/javascript" src="js/attr-functions.js"></script>
     <script type="text/javascript" src="js/skill-functions.js"></script>
+    <script type="text/javascript" src="js/character-info-functions.js"></script>
     <meta charset="utf-8" />
     <title>Character Sheet</title>
 </head>
 
-<body onload="displayAttributesFromStorage(); displaySkillsFromStorage();">
+<body onload="displayAttributesFromStorage(); displaySkillsFromStorage(); displayStatsFromStorage(); updateHealthValueInLocalStorage();">
     <div class="flex-row">
         <!-- Contains the columns-->
         <div class="flex-column">
@@ -35,28 +36,8 @@
             <h1>Character Info</h1>
             <div class="flex-row">
                 <!-- [Section 2 Column 1 / Row 1] Contains general character info -->
-                <div class="form-group">
-                    <label>Current HP: </label> <br />
-                    <input type="number" id="currenthp" name="currenthp" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Max HP: </label> <br />
-                    <input type="number" id="maxhp" name="maxhp" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>AC: </label> <br />
-                    <input type="number" id="ac" name="ac" value="0" /> <br />
-                </div>
-
-                <div class="form-group">
-                    <label>Level: </label> <br />
-                    <input type="number" id="level" name="level" value="0" /> <br />
-                </div>
-
-                <div class="form-group">
-                    <label>Class: </label> <br />
-                    <input type="text" id="class" name="class" /> <br />
-                </div>
+                <div class="container-of-health" id="container-of-health"></div>
+                <div class="stat-container" id="stat-container" style="display:flex; flex-wrap: wrap; width: 800px;"></div>
                 <!-- [Section 2 Column 1 / Row 1 End] -->
             </div>
             <h2>Physical Resistances</h2>

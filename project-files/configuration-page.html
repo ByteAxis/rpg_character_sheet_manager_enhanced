@@ -12,7 +12,7 @@
 </head>
 
 
-<body onload="loadAttributesFromStorage(); loadSkillsFromStorage(); loadStatsFromStorage();">
+<body onload="loadAttributesFromStorage(); loadSkillsFromStorage(); loadStatsFromStorage(); initializeHealthValue();">
 
     <div class="flex-row">
 
@@ -23,15 +23,12 @@
 
         <div class="flex-column">
             <button class="adder-button" onclick="addSkill(); updateSkillNamesInLocalStorage();">Add Skill</button>
-            <div class="skill-container" id="skill-list"></div>
+            <div class="skill-container" id="skill-list" style="flex-direction: row;"></div>
         </div>
 
         <div class="flex-column">
             <button class="adder-button" onclick="addCharacterInfo(); updateStatNamesInLocalStorage();">Add Character Info</button>
-                <div class="form-group" id="health-container">
-                    <label class="stat-label"> Health Stat Name:</label>
-                    <input class="stat-input" type="text" value="Health" onchange="updateHealthNameInLocalStorage();" />
-                </div>
+            <div class="health-container"></div>
             <div class="character-info-container" id="character-info-list"></div>
         </div>
 

@@ -81,8 +81,19 @@ label {
     width: 200px;
 }
 
+.stat-label {
+    font-size: 40px;
+    width: 200px;
+}
+
 .skill-input {
     font-size: 30px;
+}
+
+.stat-container {
+    flex-direction: row;
+    flex-flow: row;
+    flex: auto;
 }
 
 .attribute-input {
@@ -103,6 +114,10 @@ input {
     font-size: 50px;
     width: 100px;
     text-align: center;
+}
+
+.health-input {
+    font-size: 60px;
 }
 
 input[type=checkbox] {
