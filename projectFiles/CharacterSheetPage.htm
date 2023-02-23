@@ -9,7 +9,7 @@
     <title>Character Sheet</title>
 </head>
 
-<body onload="displayAttributesFromStorage();">
+<body onload="displayAttributesFromStorage(); displaySkillsFromStorage();">
     <div class="flex-row">
         <!-- Contains the columns-->
         <div class="flex-column">
@@ -28,24 +28,9 @@
                 </div>
 
                 <div class="flex-column">
-                    <!-- [Column 2] Contains skills -->
-                    <label>Skill 1:</label> <br />
-                    <input type="checkbox" id="skill1" name="skill1" /> <br />
-
-                    <label>Skill 2:</label> <br />
-                    <input type="checkbox" id="skill2" name="skill2" /> <br />
-
-                    <label>Skill 3:</label> <br />
-                    <input type="checkbox" id="skill3" name="skill3" /> <br />
-
-                    <label>Skill 4:</label> <br />
-                    <input type="checkbox" id="skill4" name="skill4" /> <br />
-
-                    <label>Skill 5:</label> <br />
-                    <input type="checkbox" id="skill5" name="skill5" /> <br />
-
-                    <label>Skill 6:</label> <br />
-                    <input type="checkbox" id="skill6" name="skill6" /> <br />
+                    <div class="skill-container" id="skilllist">
+                        <!-- [Column 2] Contains skills -->
+                    </div>
                 </div>
             </div>
         </div>
