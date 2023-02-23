@@ -6,6 +6,7 @@
     <script type="text/javascript" src="js/jquery-3.6.3.js"></script>
     <script type="text/javascript" src="js/attr-functions.js"></script>
     <script type="text/javascript" src="js/skill-functions.js"></script>
+    <script type="text/javascript" src="js/character-info-functions.js"></script>
     <meta charset="utf-8" />
     <title>Configuration Page</title>
 </head>
@@ -19,7 +20,15 @@
         </div>
         <div class="flex-column">
             <button class="adder-button" onclick="addSkill(); updateSkillNamesInLocalStorage();">Add Skill</button>
-            <div class="skill-container" id="skilllist"></div>
+            <div class="skill-container" id="skill-list"></div>
+        </div>
+        <div class="flex-column">
+            <button class="adder-button" onclick="addCharacterInfo(); updateCharacterInfo();">Add Character Info</button>
+            <div class="health-container" id="health-container">
+                <label class="stat-label"> Health Stat Name:</label>
+                <input class="stat-input" type="text" value="Health" onchange="updateHealthNameInLocalStorage();" />
+            </div>
+            <div class="character-info-container" id="character-info-list"></div>
         </div>
         <a href="character-sheet.html" style="align-self: start;">Go to character sheet</a>
     </div>
