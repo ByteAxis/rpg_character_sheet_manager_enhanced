@@ -14,11 +14,11 @@
 <body onload="loadAttributesFromStorage(); loadSkillsFromStorage();">
     <div class="flex-row" style="align-items: start;">
         <div class="flex-column">
-            <button onclick="addAttribute(); updateAttributeNamesInLocalStorage();" style="font-size: 30px; width: 250px;">Add Attribute</button>
+            <button class="adder-button" onclick="addAttribute(); updateAttributeNamesInLocalStorage();" style="font-size: 30px; width: 250px;">Add Attribute</button>
             <div class="attribute-container" id="attributelist"></div>
         </div>
         <div class="flex-column">
-            <button onclick="addSkill(); updateSkillNamesInLocalStorage();" style="font-size: 30px; width: 250px;">Add Skill</button>
+            <button class="adder-button" onclick="addSkill(); updateSkillNamesInLocalStorage();" style="font-size: 30px; width: 250px;">Add Skill</button>
             <div class="skill-container" id="skilllist"></div>
         </div>
         <a href="character-sheet.html" style="align-self: start;">Go to character sheet</a>

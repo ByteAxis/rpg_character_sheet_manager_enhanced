@@ -9,6 +9,11 @@ button {
     font-size: 50px;
 }
 
+adder-button {
+    font-size: 30px;
+    width: 250px;
+}
+
 a {
     font-size: 40px;
 }
@@ -48,17 +53,11 @@ a {
     margin: 20px;
 }
 
-.flex-container > div {
-
-}
-
 .form-group {
     display: flex;
     flex-direction: row;
     margin: 10px;
 }
-
-.form-group >
 
 body {
     background-color: white;
@@ -69,6 +68,11 @@ label {
     text-align: center;
 }
 
+.skill-label {
+    font-size:40px;
+    width: 200px;
+}
+
 input {
     font-size: 50px;
     width: 100px;
@@ -76,10 +80,12 @@ input {
 }
 
 input[type=checkbox] {
+    height: 60px;
+    width: 60px;
     border: 20px;
-    width: 100%;
-    height: 58px;
-    accent-color: red;
+    margin-top: 10px;
+    margin-left: 20px;
+    accent-color: green;
 }
 
 input[type=text] {

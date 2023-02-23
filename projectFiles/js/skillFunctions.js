@@ -18,8 +18,8 @@ function displaySkillsFromStorage() {
         $(".skill-container").append('\
             \
             <div class="form-group"> \
-            <label id="skilllabel" style="font-size: 40px; width: 200px;">' + localStorage.getItem("skillName" + i) + ': </label > \
-            <input type="checkbox" ' + setChecked + ' onchange="updateSkillValuesInLocalStorage();" style="margin-top:10px; height:60px; width:60px; margin-left: 20px;" /> <br /> \
+            <label class="skill-label" id="skill-label">' + localStorage.getItem("skillName" + i) + ': </label > \
+            <input type="checkbox" ' + setChecked + ' onchange="updateSkillValuesInLocalStorage();" /> <br /> \
             </div> \
             \
             ');
@@ -47,7 +47,7 @@ function addSkill() {
     $(".skill-container").append('\
             \
             <div class="form-group"> \
-            <label id="skilllabel"> Skill ' + numberOfNewForm + ': </label > \
+            <label id="skill-label"> Skill ' + numberOfNewForm + ': </label > \
             <input type="text" value="Skill Name" onchange="updateSkillNamesInLocalStorage();" style="font-size: 30px;" /> <br /> \
             <button onclick="removeSkill(this)">X</button> \
             </div> \
@@ -106,7 +106,7 @@ function loadSkillsFromStorage() {
         $(".skill-container").append('\
             \
             <div class="form-group"> \
-            <label id="skilllabel">' + "Skill " + i + ': </label > \
+            <label id="skill-label">' + "Skill " + i + ': </label > \
             <input type="text" value="' + localStorage.getItem("skillName" + i) + '"onchange="updateSkillNamesInLocalStorage();" style="font-size: 30px;" /> <br /> \
             <button onclick="removeSkill(this)">X</button> \
             </div> \
