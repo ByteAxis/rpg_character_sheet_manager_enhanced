@@ -11,7 +11,7 @@ function displayAttributesFromStorage() {
         $(".attribute-container").append('\
             \
             <div class="form-group"> \
-            <label id="attrlabel">' + localStorage.getItem("attributeName" + i) + ': </label > \
+            <label id="attrlabel" style="font-size:40px;">' + localStorage.getItem("attributeName" + i) + ': </label > \
             <input type="number" value=' + attributeVal + ' onchange="updateAttributeValuesInLocalStorage();" style="font-size: 60px; width: 130px;" /> <br /> \
             </div> \
             \
