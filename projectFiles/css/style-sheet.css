@@ -1,8 +1,11 @@
 h1 {
     font-size: 100px;
+    font-family: 'Yu Gothic';
 }
 h2 {
     font-size: 55px;
+    font-family: 'Yu Gothic';
+    padding-top: 80px;
 }
 
 button {
@@ -16,12 +19,14 @@ adder-button {
 
 a {
     font-size: 40px;
+    color: black;
+    text-align: center;
 }
 
 .flex-row {
     display: flex;
     flex-direction: row;
-    background-color: dodgerblue;
+    background-color: rebeccapurple;
     width: fit-content;
     align-items: start;
     justify-content: center;
@@ -32,7 +37,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: dodgerblue;
+    background-color: rebeccapurple;
     width: fit-content;
     align-items: center;
     justify-content: center;
@@ -46,7 +51,7 @@ a {
 .flex-column {
     display: flex;
     flex-direction: column;
-    background-color: dodgerblue;
+    background-color: rebeccapurple;
     width: fit-content;
     align-items: center;
     justify-content: center;
@@ -64,8 +69,11 @@ body {
 }
 
 label {
-    width: 150px;
+    font-size: 30px;
     text-align: center;
+    width: 150px;
+    padding: 25px;
+    background-color: darkkhaki;
 }
 
 .skill-label {
@@ -82,8 +90,10 @@ label {
 }
 
 .attribute-label {
+    width: 250px;
     font-size: 50px;
 }
+
 .attribute-value-input {
     font-size: 60px;
     width: 130px;
@@ -102,6 +112,7 @@ input[type=checkbox] {
     margin-top: 10px;
     margin-left: 20px;
     accent-color: green;
+    align-self: center;
 }
 
 input[type=text] {
@@ -118,10 +129,4 @@ input[type=text] {
 }
 .flex-row-wrap > label {
     margin-top: 30px;
-}
-
-label {
-    font-size: 30px;
-    padding: 25px;
-    background-color: mediumaquamarine
 }
