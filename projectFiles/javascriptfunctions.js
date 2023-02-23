@@ -56,14 +56,6 @@ function updateAttributeValuesInLocalStorage() {
     }
 }
 
-function updateSkillValuesInLocalStorage() {
-    var children = document.getElementById("skilllist").children;
-    for (var i = 0; i < children.length; i++) {
-        if (children[i].querySelector("input").checked) {
-            localStorage.setItem("skillValue" + (i + 1), true);
-        } else {
-            localStorage.setItem("skillValue" + (i + 1), false);
-        }
 
     }
 }
