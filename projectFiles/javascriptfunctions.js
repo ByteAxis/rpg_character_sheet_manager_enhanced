@@ -11,7 +11,7 @@ function displayAttributesFromStorage() {
         $(".attribute-container").append('\
             \
             <div class="form-group"> \
-            <label id="attrlabel" style="font-size:40px;">' + localStorage.getItem("attributeName" + i) + ': </label > \
+            <label id="attrlabel" style="font-size: 50px;">' + localStorage.getItem("attributeName" + i) + ': </label > \
             <input type="number" value=' + attributeVal + ' onchange="updateAttributeValuesInLocalStorage();" style="font-size: 60px; width: 130px;" /> <br /> \
             </div> \
             \
@@ -40,7 +40,7 @@ function displaySkillsFromStorage() {
         $(".skill-container").append('\
             \
             <div class="form-group"> \
-            <label id="skilllabel">' + localStorage.getItem("skillName" + i) + ': </label > \
+            <label id="skilllabel" style="font-size: 40px; width: 200px;">' + localStorage.getItem("skillName" + i) + ': </label > \
             <input type="checkbox" ' + setChecked + ' onchange="updateSkillValuesInLocalStorage();" style="margin-top:10px; height:60px; width:60px; margin-left: 20px;" /> <br /> \
             </div> \
             \
