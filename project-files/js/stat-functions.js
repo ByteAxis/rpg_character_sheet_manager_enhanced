@@ -1,4 +1,4 @@
-function displayStatsFromStorage() {
+function displayStats() {
     if (localStorage.getItem("healthValue") !== null) {
         displayHealth = localStorage.getItem("healthValue");
     } else {
@@ -8,11 +8,11 @@ function displayStatsFromStorage() {
     $(".container-of-health").append('\
         <div class="form-group"> \
         <label class="stat-label">Current ' + localStorage.getItem("healthName") + ': </label> <br /> \
-        <input class="health-input" type = "number" id = "currenthp" name = "currenthp" value = ' + displayHealth  + ' onchange = "updateHealthValueInLocalStorage();" /> <br /> \
+        <input class="health-input" type = "number" id = "currenthp" name = "currenthp" value = ' + displayHealth  + ' onchange = "updateHealthValue();" /> <br /> \
         </div> \
         <div class="form-group"> \
         <label class="stat-label">Max ' + localStorage.getItem("healthName") + ': </label> <br /> \
-        <input class="health-input" type = "number" id = "maxhp" name = "maxhp" value = ' + localStorage.getItem("healthMax") + ' onchange = "updateMaxHealthValueInLocalStorage();" /> <br /> \
+        <input class="health-input" type = "number" id = "maxhp" name = "maxhp" value = ' + localStorage.getItem("healthMax") + ' onchange = "updateMaxHealthValue();" /> <br /> \
         </div> \
         ');
 
@@ -22,13 +22,13 @@ function displayStatsFromStorage() {
             var statVal = (localStorage.getItem("statValue" + i)); // I wonder if this can leave scope.
         } else {
             statVal = 0;
-            updateStatValuesInLocalStorage();
+            updateStatValues();
         }
         $(".stat-container").append('\
             \
             <div class="form-group"> \
             <label class="stat-label" id="stat-label">' + localStorage.getItem("statName" + i) + ': </label > \
-            <input class="stat-input" type="number" value=' + statVal + ' onchange="updateStatValuesInLocalStorage();" /> <br /> \
+            <input class="stat-input" type="number" value=' + statVal + ' onchange="updateStatValues();" /> <br /> \
             </div> \
             \
             ');
@@ -36,7 +36,7 @@ function displayStatsFromStorage() {
     }
 }
 
-function updateStatValuesInLocalStorage() {
+function updateStatValues() {
     var children = document.getElementById("stat-container").children;
     for (var i = 0; i < children.length; i++) {
         inputStatName = children[i].querySelector("input").value;
@@ -44,17 +44,17 @@ function updateStatValuesInLocalStorage() {
     }
 }
 
-function addCharacterInfo() {
+function addStat() {
 
     var formgroup = document.getElementById("character-info-list");
     var numberOfForms = formgroup.children.length;
     var numberOfNewForm = numberOfForms + 1;
 
-    $(".character-info-container").append('\
+    $(".stat-container").append('\
             \
             <div class="form-group"> \
             <label id="stat-label"> Stat ' + numberOfNewForm + ': </label > \
-            <input class="stat-input" type="text" value="Stat Name" onchange="updateStatNamesInLocalStorage();" /> <br /> \
+            <input class="stat-input" type="text" value="Stat Name" onchange="updateStatNames();" /> <br /> \
             <button onclick="removeStat(this)">X</button> \
             </div> \
             \
@@ -92,13 +92,13 @@ function removeStat(buttonelement) { // Parallel data continuity achieved.
     localStorage.removeItem("statValue" + finalStatIndex); // De-allocate unsued memory
 }
 
-function updateHealthNameInLocalStorage() {
+function updateHealthName() {
     var children = document.getElementById("health-container");
     var healthName = children.querySelector("input").value;
     localStorage.setItem("healthName", healthName);
 }
 
-function updateStatNamesInLocalStorage() {
+function updateStatNames() {
     var children = document.getElementById("character-info-list").children;
     for (var i = 0; i < children.length; i++) {
         statName = children[i].querySelector("input").value;
@@ -111,7 +111,7 @@ function updateStatNamesInLocalStorage() {
     }
 }
 
-function loadStatsFromStorage() {
+function loadStats() {
     if (localStorage.getItem("healthName") !== null) {
         var healthName = localStorage.getItem("healthName");
     } else {
@@ -122,17 +122,17 @@ function loadStatsFromStorage() {
     $(".health-container").append('\
         <div class="form-group"> \
         <label class="stat-label">Health Name: </label> <br /> \
-        <input class="stat-input" type = "text" id = "healthName" name = "healthName" value = ' + healthName + ' onchange = "updateHealthNameInLocalStorage();" /> <br /> \
+        <input class="stat-input" type = "text" id = "healthName" name = "healthName" value = ' + healthName + ' onchange = "updateHealthName();" /> <br /> \
         </div> \
         ');
 
     var i = 1;
     while (localStorage.getItem("statName" + i) !== null) {
-        $(".character-info-container").append('\
+        $(".stat-container").append('\
             \
             <div class="form-group"> \
             <label id="stat-label">' + "Stat " + i + ': </label > \
-            <input class="stat-input" type="text" value="' + localStorage.getItem("statName" + i) + '"onchange="updateStatNamesInLocalStorage();" /> <br /> \
+            <input class="stat-input" type="text" value="' + localStorage.getItem("statName" + i) + '"onchange="updateStatNames();" /> <br /> \
             <button onclick="removeStat(this)">X</button> \
             </div> \
             \
@@ -141,13 +141,13 @@ function loadStatsFromStorage() {
     }
 }
 
-function updateHealthValueInLocalStorage() {
+function updateHealthValue() {
     var children = document.getElementById("container-of-health");
     var userInputHealthValue = children.querySelector("input[id='currenthp']").value;
         localStorage.setItem("healthValue", userInputHealthValue);
 }
 
-function updateMaxHealthValueInLocalStorage() {
+function updateMaxHealthValue() {
     var children = document.getElementById("container-of-health");
     var userInputHealthValue = children.querySelector("input[id='maxhp']").value;
     localStorage.setItem("healthMax", userInputHealthValue);

@@ -4,32 +4,32 @@
 <head>
     <link rel="stylesheet" href="css/style-sheet.css" />
     <script type="text/javascript" src="js/jquery-3.6.3.js"></script>
-    <script type="text/javascript" src="js/attr-functions.js"></script>
+    <script type="text/javascript" src="js/attribute-functions.js"></script>
     <script type="text/javascript" src="js/skill-functions.js"></script>
-    <script type="text/javascript" src="js/character-info-functions.js"></script>
+    <script type="text/javascript" src="js/stat-functions.js"></script>
     <meta charset="utf-8" />
     <title>Configuration Page</title>
 </head>
 
 
-<body onload="loadAttributesFromStorage(); loadSkillsFromStorage(); loadStatsFromStorage(); initializeHealthValue();">
+<body onload="loadAttributes(); loadSkills(); loadStats(); initializeHealthValue();">
 
     <div class="flex-row">
 
         <div class="flex-column">
-            <button class="adder-button" onclick="addAttribute(); updateAttributeNamesInLocalStorage();">Add Attribute</button>
+            <button class="adder-button" onclick="addAttribute(); updateAttributeNames();">Add Attribute</button>
             <div class="attribute-container" id="attributelist"></div>
         </div>
 
         <div class="flex-column">
-            <button class="adder-button" onclick="addSkill(); updateSkillNamesInLocalStorage();">Add Skill</button>
+            <button class="adder-button" onclick="addSkill(); updateSkillNames();">Add Skill</button>
             <div class="skill-container" id="skill-list" style="flex-direction: row;"></div>
         </div>
 
         <div class="flex-column">
-            <button class="adder-button" onclick="addCharacterInfo(); updateStatNamesInLocalStorage();">Add Character Info</button>
+            <button class="adder-button" onclick="addStat(); updateStatNames();">Add Character Info</button>
             <div class="health-container"></div>
-            <div class="character-info-container" id="character-info-list"></div>
+            <div class="stat-container" id="character-info-list"></div>
         </div>
 
         <a href="character-sheet.html" style="align-self: start;">Go to character sheet</a>

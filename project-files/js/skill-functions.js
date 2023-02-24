@@ -1,11 +1,11 @@
-function displaySkillsFromStorage() {
+function displaySkills() {
     var i = 1;
     while (localStorage.getItem("skillName" + i) !== null) {
         if (localStorage.getItem("skillValue" + i) !== null) {
             var skillValue = (localStorage.getItem("skillValue" + i));
         } else {
             skillValue = false;
-            updateSkillValuesInLocalStorage(); // In case skillValue is null, set it to false and sync storage
+            updateSkillValues(); // In case skillValue is null, set it to false and sync storage
         }
 
 
@@ -19,7 +19,7 @@ function displaySkillsFromStorage() {
             \
             <div class="form-group"> \
             <label class="skill-label" id="skill-label">' + localStorage.getItem("skillName" + i) + ': </label > \
-            <input type="checkbox" ' + setChecked + ' onchange="updateSkillValuesInLocalStorage();" /> <br /> \
+            <input type="checkbox" ' + setChecked + ' onchange="updateSkillValues();" /> <br /> \
             </div> \
             \
             ');
@@ -27,7 +27,7 @@ function displaySkillsFromStorage() {
     }
 }
 
-function updateSkillValuesInLocalStorage() {
+function updateSkillValues() {
     var children = document.getElementById("skill-list").children;
     for (var i = 0; i < children.length; i++) {
         if (children[i].querySelector("input").checked) {
@@ -48,7 +48,7 @@ function addSkill() {
             \
             <div class="form-group"> \
             <label id="skill-label"> Skill ' + numberOfNewForm + ': </label > \
-            <input class="skill-input" type="text" value="Skill Name" onchange="updateSkillNamesInLocalStorage();" /> <br /> \
+            <input class="skill-input" type="text" value="Skill Name" onchange="updateSkillNames();" /> <br /> \
             <button onclick="removeSkill(this)">X</button> \
             </div> \
             \
@@ -87,7 +87,7 @@ function removeSkill(buttonelement) { // Parallel data continuity achieved.
     localStorage.removeItem("skillValue" + finalSkillIndex); // De-allocate unsued memory
 }
 
-function updateSkillNamesInLocalStorage() {
+function updateSkillNames() {
     var children = document.getElementById("skill-list").children;
     for (var i = 0; i < children.length; i++) {
         userChosenSkillName = children[i].querySelector("input").value;
@@ -100,14 +100,14 @@ function updateSkillNamesInLocalStorage() {
     }
 }
 
-function loadSkillsFromStorage() {
+function loadSkills() {
     var i = 1;
     while (localStorage.getItem("skillName" + i) !== null) {
         $(".skill-container").append('\
             \
             <div class="form-group"> \
             <label id="skill-label">' + "Skill " + i + ': </label > \
-            <input class="skill-input" type="text" value="' + localStorage.getItem("skillName" + i) + '"onchange="updateSkillNamesInLocalStorage();" /> <br /> \
+            <input class="skill-input" type="text" value="' + localStorage.getItem("skillName" + i) + '"onchange="updateSkillNames();" /> <br /> \
             <button onclick="removeSkill(this)">X</button> \
             </div> \
             \

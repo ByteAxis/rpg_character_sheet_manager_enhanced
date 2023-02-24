@@ -1,17 +1,17 @@
-function displayAttributesFromStorage() {
+function displayAttributes() {
     var i = 1;
     while (localStorage.getItem("attributeName" + i) !== null) { // While "attributeName{i}" exists,
         if (localStorage.getItem("attributeValue" + i) !== null) {
             var attributeVal = (localStorage.getItem("attributeValue" + i)); // I wonder if this can leave scope.
         } else {
             attributeVal = 0;
-            updateAttributeValuesInLocalStorage();
+            updateAttributeValues();
         }
         $(".attribute-container").append('\
             \
             <div class="form-group"> \
             <label class="attribute-label" id="attrlabel">' + localStorage.getItem("attributeName" + i) + ': </label > \
-            <input class="attribute-value-input" type="number" value=' + attributeVal + ' onchange="updateAttributeValuesInLocalStorage();" /> <br /> \
+            <input class="attribute-value-input" type="number" value=' + attributeVal + ' onchange="updateAttributeValues();" /> <br /> \
             </div> \
             \
             ');
@@ -19,7 +19,7 @@ function displayAttributesFromStorage() {
     }
 }
 
-function updateAttributeValuesInLocalStorage() {
+function updateAttributeValues() {
     var children = document.getElementById("attributelist").children;
     for (var i = 0; i < children.length; i++) {
         userChosenAttributeValue = children[i].querySelector("input").value;
@@ -37,7 +37,7 @@ function addAttribute() {
             \
             <div class="form-group"> \
             <label id="attrlabel"> Attribute ' + numberOfNewForm + ': </label > \
-            <input class="attribute-input" type="text" value="Attribute Name" onchange="updateAttributeNamesInLocalStorage();" /> <br /> \
+            <input class="attribute-input" type="text" value="Attribute Name" onchange="updateAttributeNames();" /> <br /> \
             <button onclick="removeAttr(this)">X</button> \
             </div> \
             \
@@ -75,7 +75,7 @@ function removeAttr(buttonelement) { // Parallel data continuity achieved.
     localStorage.removeItem("attributeValue" + finalAttributeIndex); // De-allocate unsued memory
 }
 
-function updateAttributeNamesInLocalStorage() {
+function updateAttributeNames() {
     var children = document.getElementById("attributelist").children;
     for (var i = 0; i < children.length; i++) {
         userChosenAttributeName = children[i].querySelector("input").value;
@@ -88,14 +88,14 @@ function updateAttributeNamesInLocalStorage() {
     }
 }
 
-function loadAttributesFromStorage() {
+function loadAttributes() {
     var i = 1;
     while (localStorage.getItem("attributeName" + i) !== null) {
         $(".attribute-container").append('\
             \
             <div class="form-group"> \
             <label id="attrlabel">' + "Attribute " + i + ': </label > \
-            <input class="attribute-input" type="text" value="' + localStorage.getItem("attributeName" + i) + '"onchange="updateAttributeNamesInLocalStorage();" /> <br /> \
+            <input class="attribute-input" type="text" value="' + localStorage.getItem("attributeName" + i) + '"onchange="updateAttributeNames();" /> <br /> \
             <button onclick="removeAttr(this)">X</button> \
             </div> \
             \

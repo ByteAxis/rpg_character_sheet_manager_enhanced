@@ -4,14 +4,14 @@
 <head>
     <link rel="stylesheet" href="css/style-sheet.css" />
     <script type="text/javascript" src="js/jquery-3.6.3.js"></script>
-    <script type="text/javascript" src="js/attr-functions.js"></script>
+    <script type="text/javascript" src="js/attribute-functions.js"></script>
     <script type="text/javascript" src="js/skill-functions.js"></script>
-    <script type="text/javascript" src="js/character-info-functions.js"></script>
+    <script type="text/javascript" src="js/stat-functions.js"></script>
     <meta charset="utf-8" />
     <title>Character Sheet</title>
 </head>
 
-<body onload="displayAttributesFromStorage(); displaySkillsFromStorage(); displayStatsFromStorage(); updateHealthValueInLocalStorage();">
+<body onload="displayAttributes(); displaySkills(); displayStats(); updateHealthValue();">
     <div class="flex-row">
         <!-- Contains the columns-->
         <div class="flex-column">
