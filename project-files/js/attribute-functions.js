@@ -7,7 +7,7 @@ function addAttribute() {
     $(".attribute-container").append('\
             \
             <div class="form-group"> \
-            <label id="attribute-label"> Attribute ' + numberOfNewInputField + ': </label > \
+            <label class="attribute-label" id="attribute-label"> Attribute ' + numberOfNewInputField + ': </label > \
             <input class="attribute-input" type="text" value="Attribute Name" onchange="updateAttributeNames();" /> <br /> \
             <button onclick="removeAttr(this)">X</button> \
             </div> \

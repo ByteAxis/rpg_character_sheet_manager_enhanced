@@ -86,8 +86,24 @@ label {
     width: 200px;
 }
 
-.skill-input {
+.attribute-input {
     font-size: 30px;
+    width: 200px;
+}
+
+.skill-input {
+    width: 300px;
+    font-size: 30px;
+}
+
+.stat-input {
+    font-size: 40px;
+    width: 300px;
+}
+
+.resistance-input {
+    font-size: 40px;
+    width: 400px;
 }
 
 .stat-container {
@@ -96,18 +112,20 @@ label {
     flex: auto;
 }
 
-.attribute-input {
-    font-size: 30px;
+.resistance-container {
+    flex-direction: row;
+    flex-flow: row;
+    flex: auto;
+}
+
+.resistance-label {
+    font-size: 40px;
+    width: 250px;
 }
 
 .attribute-label {
     width: 250px;
     font-size: 50px;
-}
-
-.attribute-value-input {
-    font-size: 60px;
-    width: 130px;
 }
 
 input {
@@ -128,10 +146,6 @@ input[type=checkbox] {
     margin-left: 20px;
     accent-color: green;
     align-self: center;
-}
-
-input[type=text] {
-    width: 250px;
 }
 
 .flex-row > input {

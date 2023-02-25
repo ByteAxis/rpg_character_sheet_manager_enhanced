@@ -7,7 +7,7 @@ function addResistance() {
     $(".resistance-container").append('\
             \
             <div class="form-group"> \
-            <label id="resistance-label"> Resistance ' + numberOfNewInputField + ': </label > \
+            <label class="resistance-label" id="resistance-label"> Resistance ' + numberOfNewInputField + ': </label > \
             <input class="resistance-input" type="text" value="Resistance Name" onchange="updateResistanceNames();" /> <br /> \
             <button onclick="removeResistance(this)">X</button> \
             </div> \
