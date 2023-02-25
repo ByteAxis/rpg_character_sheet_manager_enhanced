@@ -1,13 +1,13 @@
 function addAttribute() {
 
-    var formgroup = document.getElementById("attribute-container");
-    var numberOfForms = formgroup.children.length;
-    var numberOfNewForm = numberOfForms + 1;
+    var container = document.getElementById("attribute-container");
+    var numberOfInputFields = container.children.length;
+    var numberOfNewInputField = numberOfInputFields + 1;
 
     $(".attribute-container").append('\
             \
             <div class="form-group"> \
-            <label id="attribute-label"> Attribute ' + numberOfNewForm + ': </label > \
+            <label id="attribute-label"> Attribute ' + numberOfNewInputField + ': </label > \
             <input class="attribute-input" type="text" value="Attribute Name" onchange="updateAttributeNames();" /> <br /> \
             <button onclick="removeAttr(this)">X</button> \
             </div> \

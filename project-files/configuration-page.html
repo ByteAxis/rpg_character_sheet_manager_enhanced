@@ -7,12 +7,13 @@
     <script type="text/javascript" src="js/attribute-functions.js"></script>
     <script type="text/javascript" src="js/skill-functions.js"></script>
     <script type="text/javascript" src="js/stat-functions.js"></script>
+    <script type="text/javascript" src="js/resistance-functions.js"></script>
     <meta charset="utf-8" />
     <title>Configuration Page</title>
 </head>
 
 
-<body onload="loadAttributesOntoConfigurationPage(); loadSkills(); loadStatsOntoConfigurationPage(); initializeHealthValue();">
+<body onload="loadAttributesOntoConfigurationPage(); loadSkills(); loadStatsOntoConfigurationPage(); loadResistancesOntoConfigurationPage();  initializeHealthValue();">
 
     <div class="flex-row">
 
@@ -33,7 +34,7 @@
         </div>
 
         <div class="flex-column">
-            <button class="adder-button" onclick="">Add Resistance</button>
+            <button class="adder-button" onclick="addResistance(); updateResistanceNames();">Add Resistance</button>
             <div class="resistance-container" id="resistance-container"></div>
         </div>
 
