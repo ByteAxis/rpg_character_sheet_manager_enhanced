@@ -72,7 +72,7 @@ function loadAttributesOntoConfigurationPage() {
         $(".attribute-container").append('\
             \
             <div class="form-group"> \
-            <label id="attribute-label">' + "Attribute " + i + ': </label > \
+            <label class="attribute-label" id="attribute-label">' + "Attribute " + i + ': </label > \
             <input class="attribute-input" type="text" value="' + localStorage.getItem("attributeName" + i) + '"onchange="updateAttributeNames();" /> <br /> \
             <button onclick="removeAttr(this)">X</button> \
             </div> \
