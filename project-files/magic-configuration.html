@@ -14,11 +14,24 @@
     <h1>Welcome to the magic configuration page!</h1>
 
 
-    <div style="padding-left: 500px;">
-        <button class="adder-button" onclick="addSpell(); updateSpells();">Add Spell</button>
+
+    <div class="flex-column" style="align-items:flex-start; width: auto;">
+        <div style="padding-left: 500px;">
+            <button class="adder-button" onclick="addSpell(); updateSpells();">Add Spell</button>
+        </div>
+
+        <div class="spell-explanation-labels">
+            <label style="width: 225px;">Spell Number</label>
+            <label style="width: 310px;">Spell Name</label>
+            <label style="width: 390px;">Spell Level</label>
+            <label style="width: 320px;">Spell Range</label>
+            <label style="width: 390px;">Spell Damage</label>
+            <label style="width: 320px;">Spell Components</label>
+            <label style="width: 410px;">Spell Concentration</label>
+        </div>
+
         <div class="spell-container" id="spell-container" style="flex-direction: row;"></div>
     </div>
-
     <div style="padding-top: 0px; padding-left: 0px;">
         <a href="main-configuration.html">Go To Main Configuration Page</a> <br />
     </div>

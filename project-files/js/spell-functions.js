@@ -12,6 +12,7 @@ function addSpell() {
             <input class="spell-level-input" type="number" value="1" onchange="updateSpellLevels();" /> <br /> \
             <input class="spell-range-input" type="text" value="Spell Range" onchange="updateSpellRanges();" /> <br /> \
             <input class="spell-damage-input" type ="number" value="0" onchange="updateSpellDamages();" /> <br /> \
+            <input class="spell-castingtime-input" type="text" value="Casting Time" onchange="updateSpellCastingtime();" /> <br /> \
             <input class="spell-component-input" type="text" value="Components" onchange="updateSpellComponents();" /> <br /> \
             <label class="spell-concentration-label" id="spell-concentration-label">Requires Concentration:</label> <br /> \
             <input class="spell-concentration-input" type="checkbox" onchange="updateSpellConcentrations();" /> <br /> \

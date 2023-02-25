@@ -121,6 +121,18 @@ label.spell-concentration-label {
     overflow-wrap: anywhere;
 }
 
+.spell-explanation-labels {
+    display:flex;
+    padding-top: 20px;
+    width: fit-content;
+}
+.spell-explanation-labels > * {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
+}
+
 button.delete-button {
     width:100px;
 }
