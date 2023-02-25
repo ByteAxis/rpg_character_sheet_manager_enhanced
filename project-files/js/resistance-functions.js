@@ -69,3 +69,32 @@ function loadResistancesOntoConfigurationPage() {
         i++;
     }
 }
+
+function loadResistancesOntoCharacterSheet() {
+    var i = 1;
+    while (localStorage.getItem("resistanceName" + i) !== null) {
+        if (localStorage.getItem("resistanceValue" + i) !== null) {
+            var resistanceVal = (localStorage.getItem("resistanceValue" + i));
+        } else {
+            resistanceVal = 0;
+            updateResistanceValues();
+        }
+        $(".resistance-container").append('\
+            \
+            <div class="form-group"> \
+            <label class="resistance-label" id="resistance-label">' + localStorage.getItem("resistanceName" + i) + ': </label > \
+            <input class="resistance-value-input" type="number" value=' + resistanceVal + ' onchange="updateResistanceValues();" /> <br /> \
+            </div> \
+            \
+            ');
+        i++;
+    }
+}
+
+function updateResistanceValues() {
+    var children = document.getElementById("resistance-container").children;
+    for (var i = 0; i < children.length; i++) {
+        userChosenResistanceValue = children[i].querySelector("input").value;
+        localStorage.setItem("resistanceValue" + (i + 1), userChosenResistanceValue);
+    }
+}

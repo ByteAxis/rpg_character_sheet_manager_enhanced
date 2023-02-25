@@ -7,11 +7,12 @@
     <script type="text/javascript" src="js/attribute-functions.js"></script>
     <script type="text/javascript" src="js/skill-functions.js"></script>
     <script type="text/javascript" src="js/stat-functions.js"></script>
+    <script type="text/javascript" src="js/resistance-functions.js"></script>
     <meta charset="utf-8" />
     <title>Character Sheet</title>
 </head>
 
-<body onload="loadAttributesOntoCharacterSheet(); displaySkills(); displayStatsOntoCharacterSheet(); updateHealthValue();">
+<body onload="loadAttributesOntoCharacterSheet(); displaySkills(); displayStatsOntoCharacterSheet(); updateHealthValue(); loadResistancesOntoCharacterSheet();">
     <div class="flex-row">
         <!-- Contains the columns-->
         <div class="flex-column">
@@ -40,63 +41,10 @@
                 <div class="stat-container" id="stat-container" style="display:flex; flex-wrap: wrap; width: 800px;"></div>
                 <!-- [Section 2 Column 1 / Row 1 End] -->
             </div>
-            <h2>Physical Resistances</h2>
+            <h2>Resistances</h2>
             <div class="flex-row">
                 <!-- [Section 2 Column 1 / Row 2] Contains physical resistances and armor info -->
-                <div class="form-group">
-                    <label>Slash Resist: </label> <br />
-                    <input type="number" id="slashresist" name="slashresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Pierce Resist: </label> <br />
-                    <input type="number" id="pierceresist" name="pierceresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Bludgeon Resist: </label> <br />
-                    <input type="number" id="bludgeonresist" name="bludgeonresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Dodge Chance: </label> <br />
-                    <input type="number" id="dodgechance" name="dodgechance" value="0" /> <br />
-                </div>
-                <!-- [Section 2 Column 1 / Row 2 End] -->
-            </div>
-            <h2> Elemental Resistances</h2>
-            <div class="flex-row-wrap" style="padding-bottom: 800px;">
-                <!-- [Section 2 Column 1 / Row 3] Contains magical/elemental resistances -->
-                <!-- acid bludgeoning cold fire force lightning necrotic piercing poison psychic radiant slashing thunder -->
-                <div class="form-group">
-                    <label>Fire Resist:</label> <br />
-                    <input type="number" id="fireresist" name="fireresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Cold Resist:</label> <br />
-                    <input type="number" id="coldresist" name="coldresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Lightning Resist:</label> <br />
-                    <input type="number" id="lightningresist" name="lightningresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Poison Resist:</label> <br />
-                    <input type="number" id="poisonresist" name="poisonresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Psychic Resist:</label> <br />
-                    <input type="number" id="psychic resist" name="psychicresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Radiant Resist:</label> <br />
-                    <input type="number" id="radiantresist" name="radiantresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Force Resist:</label> <br />
-                    <input type="number" id="forceresist" name="forceresist" value="0" /> <br />
-                </div>
-                <div class="form-group">
-                    <label>Necrotic Resist:</label> <br />
-                    <input type="number" id="necroticresist" name="necroticresist" value="0" /> <br />
-                </div>
+                <div class="resistance-container" id="resistance-container" style="display:flex; flex-wrap: wrap; width: 1200px;"></div>
             </div>
             <!-- [Section 2 Column 1 / End] -->
         </div>
