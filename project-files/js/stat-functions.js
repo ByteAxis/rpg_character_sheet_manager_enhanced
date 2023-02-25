@@ -69,7 +69,7 @@ function loadStatsOntoConfigurationPage() {
 
 function addStat() {
 
-    var formgroup = document.getElementById("character-info-list");
+    var formgroup = document.getElementById("stat-container");
     var numberOfInputFields = formgroup.children.length;
     var numberOfNewInputField = numberOfInputFields + 1;
 
@@ -87,7 +87,7 @@ function addStat() {
 function removeStat(buttonelement) { // Parallel data continuity achieved.
     // The steps for execution should be: 1. Delete the element marked for deletion | 2. Shift all displaced elements toward index 1 | 3. De-allocate unused memory
 
-    var children = document.getElementById("character-info-list").children; // Store the list of attribute forms
+    var children = document.getElementById("stat-container").children; // Store the list of attribute forms
 
     // De-allocate deleted object's memory
     for (var i = 0; i < children.length; i++) {
@@ -124,7 +124,7 @@ function updateStatValues() {
 }
 
 function updateStatNames() {
-    var children = document.getElementById("character-info-list").children;
+    var children = document.getElementById("stat-container").children;
     for (var i = 0; i < children.length; i++) {
         statName = children[i].querySelector("input").value;
         localStorage.setItem("statName" + (i + 1), statName);

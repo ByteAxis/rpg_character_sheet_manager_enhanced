@@ -1,7 +1,6 @@
-
 function addAttribute() {
 
-    var formgroup = document.getElementById("attributelist");
+    var formgroup = document.getElementById("attribute-container");
     var numberOfForms = formgroup.children.length;
     var numberOfNewForm = numberOfForms + 1;
 
@@ -18,7 +17,7 @@ function addAttribute() {
 
 
 function updateAttributeValues() {
-    var children = document.getElementById("attributelist").children;
+    var children = document.getElementById("attribute-container").children;
     for (var i = 0; i < children.length; i++) {
         userChosenAttributeValue = children[i].querySelector("input").value;
         localStorage.setItem("attributeValue" + (i + 1), userChosenAttributeValue);
@@ -26,7 +25,7 @@ function updateAttributeValues() {
 }
 
 function updateAttributeNames() {
-    var children = document.getElementById("attributelist").children;
+    var children = document.getElementById("attribute-container").children;
     for (var i = 0; i < children.length; i++) {
         userChosenAttributeName = children[i].querySelector("input").value;
         localStorage.setItem("attributeName" + (i + 1), userChosenAttributeName);
@@ -41,7 +40,7 @@ function updateAttributeNames() {
 
 function removeAttr(buttonelement) {
 
-    var inputFields = document.getElementById("attributelist").children; // Store the list of attribute forms
+    var inputFields = document.getElementById("attribute-container").children; // Store the list of attribute forms
     // 1. De-allocate deleted object's memory
     for (var i = 0; i < inputFields.length; i++) {
         if (inputFields[i] === buttonelement.parentNode) {

@@ -28,7 +28,7 @@ function displaySkills() {
 }
 
 function updateSkillValues() {
-    var children = document.getElementById("skill-list").children;
+    var children = document.getElementById("skill-container").children;
     for (var i = 0; i < children.length; i++) {
         if (children[i].querySelector("input").checked) {
             localStorage.setItem("skillValue" + (i + 1), true);
@@ -40,7 +40,7 @@ function updateSkillValues() {
 }
 
 function addSkill() {
-    var formgroup = document.getElementById("skill-list");
+    var formgroup = document.getElementById("skill-container");
     var numberOfForms = formgroup.children.length;
     var numberOfNewForm = numberOfForms + 1;
 
@@ -59,7 +59,7 @@ function removeSkill(buttonelement) { // Parallel data continuity achieved.
 
     // The steps for execution should be: 1. Delete the element marked for deletion | 2. Shift all displaced elements toward index 1 | 3. De-allocate unused memory
 
-    var children = document.getElementById("skill-list").children; // Store the list of skill forms
+    var children = document.getElementById("skill-container").children; // Store the list of skill forms
 
     // De-allocate deleted object's memory
     for (var i = 0; i < children.length; i++) {
@@ -88,7 +88,7 @@ function removeSkill(buttonelement) { // Parallel data continuity achieved.
 }
 
 function updateSkillNames() {
-    var children = document.getElementById("skill-list").children;
+    var children = document.getElementById("skill-container").children;
     for (var i = 0; i < children.length; i++) {
         userChosenSkillName = children[i].querySelector("input").value;
         localStorage.setItem("skillName" + (i + 1), userChosenSkillName);
