@@ -1,8 +1,8 @@
-function displayStats() {
+function displayStatsOntoCharacterSheet() {
     if (localStorage.getItem("healthValue") !== null) {
         displayHealth = localStorage.getItem("healthValue");
     } else {
-        localStorage.setItem("healthValue", 0);
+        localStorage.setItem("healthValue", "Health");
         displayHealth = localStorage.getItem("healthValue");
     }
     $(".container-of-health").append('\
@@ -36,24 +36,47 @@ function displayStats() {
     }
 }
 
-function updateStatValues() {
-    var children = document.getElementById("stat-container").children;
-    for (var i = 0; i < children.length; i++) {
-        inputStatName = children[i].querySelector("input").value;
-        localStorage.setItem("statValue" + (i + 1), inputStatName);
+function loadStatsOntoConfigurationPage() {
+    if (localStorage.getItem("healthName") !== null) {
+        var healthName = localStorage.getItem("healthName");
+    } else {
+        alert("Healthname was not detected, resetting to 'Health'");
+        localStorage.setItem("healthName", "Health");
+        var healthName = localStorage.getItem("healthName");
+    }
+
+    $(".health-container").append('\
+        <div class="form-group"> \
+        <label class="stat-label">Health Name: </label> <br /> \
+        <input class="stat-input" type = "text" id = "healthName" name = "healthName" value = ' + healthName + ' onchange = "updateHealthName();" /> <br /> \
+        </div> \
+        ');
+
+    var i = 1;
+    while (localStorage.getItem("statName" + i) !== null) {
+        $(".stat-container").append('\
+            \
+            <div class="form-group"> \
+            <label id="stat-label">' + "Stat " + i + ': </label > \
+            <input class="stat-input" type="text" value="' + localStorage.getItem("statName" + i) + '"onchange="updateStatNames();" /> <br /> \
+            <button onclick="removeStat(this)">X</button> \
+            </div> \
+            \
+            ');
+        i++;
     }
 }
 
 function addStat() {
 
     var formgroup = document.getElementById("character-info-list");
-    var numberOfForms = formgroup.children.length;
-    var numberOfNewForm = numberOfForms + 1;
+    var numberOfInputFields = formgroup.children.length;
+    var numberOfNewInputField = numberOfInputFields + 1;
 
     $(".stat-container").append('\
             \
             <div class="form-group"> \
-            <label id="stat-label"> Stat ' + numberOfNewForm + ': </label > \
+            <label id="stat-label"> Stat ' + numberOfNewInputField + ': </label > \
             <input class="stat-input" type="text" value="Stat Name" onchange="updateStatNames();" /> <br /> \
             <button onclick="removeStat(this)">X</button> \
             </div> \
@@ -92,10 +115,12 @@ function removeStat(buttonelement) { // Parallel data continuity achieved.
     localStorage.removeItem("statValue" + finalStatIndex); // De-allocate unsued memory
 }
 
-function updateHealthName() {
-    var children = document.getElementById("health-container");
-    var healthName = children.querySelector("input").value;
-    localStorage.setItem("healthName", healthName);
+function updateStatValues() {
+    var children = document.getElementById("stat-container").children;
+    for (var i = 0; i < children.length; i++) {
+        inputStatName = children[i].querySelector("input").value;
+        localStorage.setItem("statValue" + (i + 1), inputStatName);
+    }
 }
 
 function updateStatNames() {
@@ -111,40 +136,16 @@ function updateStatNames() {
     }
 }
 
-function loadStats() {
-    if (localStorage.getItem("healthName") !== null) {
-        var healthName = localStorage.getItem("healthName");
-    } else {
-        localStorage.setItem("healthName", 0);
-        var healthName = localStorage.getItem("healthName");
-    }
-
-    $(".health-container").append('\
-        <div class="form-group"> \
-        <label class="stat-label">Health Name: </label> <br /> \
-        <input class="stat-input" type = "text" id = "healthName" name = "healthName" value = ' + healthName + ' onchange = "updateHealthName();" /> <br /> \
-        </div> \
-        ');
-
-    var i = 1;
-    while (localStorage.getItem("statName" + i) !== null) {
-        $(".stat-container").append('\
-            \
-            <div class="form-group"> \
-            <label id="stat-label">' + "Stat " + i + ': </label > \
-            <input class="stat-input" type="text" value="' + localStorage.getItem("statName" + i) + '"onchange="updateStatNames();" /> <br /> \
-            <button onclick="removeStat(this)">X</button> \
-            </div> \
-            \
-            ');
-        i++;
+function initializeHealthValue() {
+    if (localStorage.getItem("healthValue") === null) {
+        localStorage.setItem("healthValue", 0);
     }
 }
 
 function updateHealthValue() {
     var children = document.getElementById("container-of-health");
     var userInputHealthValue = children.querySelector("input[id='currenthp']").value;
-        localStorage.setItem("healthValue", userInputHealthValue);
+    localStorage.setItem("healthValue", userInputHealthValue);
 }
 
 function updateMaxHealthValue() {
@@ -153,8 +154,8 @@ function updateMaxHealthValue() {
     localStorage.setItem("healthMax", userInputHealthValue);
 }
 
-function initializeHealthValue() {
-    if (localStorage.getItem("healthValue") === null) {
-        localStorage.setItem("healthValue", 0);
-    }
+function updateHealthName() {
+    var children = document.getElementById("health-container");
+    var healthName = children.querySelector("input").value;
+    localStorage.setItem("healthName", healthName);
 }

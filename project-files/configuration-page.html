@@ -12,7 +12,7 @@
 </head>
 
 
-<body onload="loadAttributes(); loadSkills(); loadStats(); initializeHealthValue();">
+<body onload="loadAttributesOntoConfigurationPage(); loadSkills(); loadStatsOntoConfigurationPage(); initializeHealthValue();">
 
     <div class="flex-row">
 
@@ -28,7 +28,7 @@
 
         <div class="flex-column">
             <button class="adder-button" onclick="addStat(); updateStatNames();">Add Character Info</button>
-            <div class="health-container"></div>
+            <div class="health-container" id="health-container"></div>
             <div class="stat-container" id="character-info-list"></div>
         </div>
 
