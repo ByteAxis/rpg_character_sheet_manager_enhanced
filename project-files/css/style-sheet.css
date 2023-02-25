@@ -60,6 +60,7 @@ a {
 
 .form-group {
     display: flex;
+    min-width: max-content;
     flex-direction: row;
     margin: 10px;
 }
@@ -106,6 +107,40 @@ label {
     width: 400px;
 }
 
+[class^="spell-"] { /* Selects all elements whose class starts with 'spell-' */
+    width: 400px;
+}
+
+label.spell-label {
+    width: 200px;
+    font-size: 50px;
+}
+
+label.spell-concentration-label {
+    font-size: 41px;
+    overflow-wrap: anywhere;
+}
+
+button.delete-button {
+    width:100px;
+}
+
+input.spell-concentration-input {
+    width: 100px;
+    height: 100px;
+
+}
+
+.skill-input { /* This is the checkbox for each skill on the character sheet */
+    height: 80px;
+    width: 80px;
+    border: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    accent-color: green;
+    align-self: center;
+}
+
 .stat-container {
     flex-direction: row;
     flex-flow: row;
@@ -136,16 +171,6 @@ input {
 
 .health-input {
     font-size: 60px;
-}
-
-input[type=checkbox] {
-    height: 60px;
-    width: 60px;
-    border: 20px;
-    margin-top: 10px;
-    margin-left: 20px;
-    accent-color: green;
-    align-self: center;
 }
 
 .flex-row > input {

@@ -7,11 +7,11 @@ function displayStatsOntoCharacterSheet() {
     }
     $(".container-of-health").append('\
         <div class="form-group"> \
-        <label class="stat-label">Current ' + localStorage.getItem("healthName") + ': </label> <br /> \
+        <label class="health-label">Current ' + localStorage.getItem("healthName") + ': </label> <br /> \
         <input class="health-input" type = "number" id = "currenthp" name = "currenthp" value = ' + displayHealth  + ' onchange = "updateHealthValue();" /> <br /> \
         </div> \
         <div class="form-group"> \
-        <label class="stat-label">Max ' + localStorage.getItem("healthName") + ': </label> <br /> \
+        <label class="health-label">Max ' + localStorage.getItem("healthName") + ': </label> <br /> \
         <input class="health-input" type = "number" id = "maxhp" name = "maxhp" value = ' + localStorage.getItem("healthMax") + ' onchange = "updateMaxHealthValue();" /> <br /> \
         </div> \
         ');
@@ -28,7 +28,7 @@ function displayStatsOntoCharacterSheet() {
             \
             <div class="form-group"> \
             <label class="stat-label" id="stat-label">' + localStorage.getItem("statName" + i) + ': </label > \
-            <input class="stat-input" type="number" value=' + statVal + ' onchange="updateStatValues();" /> <br /> \
+            <input class="stat-input" id="stat-input" type="number" value=' + statVal + ' onchange="updateStatValues();" /> <br /> \
             </div> \
             \
             ');
