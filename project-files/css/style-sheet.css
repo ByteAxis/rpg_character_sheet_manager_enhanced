@@ -107,18 +107,35 @@ label {
     width: 400px;
 }
 
-[class^="spell-"] { /* Selects all elements whose class starts with 'spell-' */
-    width: 400px;
+.spell-name-input {
+    width: 600px;
+}
+.spell-level-input {
+    width: 125px;
+}
+.spell-range-input {
+    width: 250px;
+}
+.spell-damage-input {
+    width: 125px;
+}
+.spell-castingtime-input {
+    width: 300px;
+}
+.spell-component-input {
+    width: 800px;
+}
+.spell-concentration-input {
+    width: 300px;
+}
+.spell-concentration-label {
+    font-size: 37px;
+    width: 200px;
 }
 
 label.spell-label {
     width: 200px;
-    font-size: 50px;
-}
-
-label.spell-concentration-label {
-    font-size: 41px;
-    overflow-wrap: anywhere;
+    font-size: 36px;
 }
 
 .spell-explanation-labels {
@@ -140,7 +157,7 @@ button.delete-button {
 input.spell-concentration-input {
     width: 100px;
     height: 100px;
-
+    align-self: center;
 }
 
 .skill-input { /* This is the checkbox for each skill on the character sheet */
