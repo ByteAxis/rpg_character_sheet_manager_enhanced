@@ -28,7 +28,7 @@ function displayStatsOntoCharacterSheet() {
             \
             <div class="form-group"> \
             <label class="stat-label" id="stat-label">' + localStorage.getItem("statName" + i) + ': </label > \
-            <input class="stat-input" id="stat-input" type="number" value=' + statVal + ' onchange="updateStatValues();" /> <br /> \
+            <input class="stat-input-display" id="stat-input" type="number" value=' + statVal + ' onchange="updateStatValues();" /> <br /> \
             </div> \
             \
             ');

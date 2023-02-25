@@ -160,7 +160,11 @@ input.spell-concentration-input {
     align-self: center;
 }
 
-.skill-input { /* This is the checkbox for each skill on the character sheet */
+.skill-input { /* This is the text input for skills on the config page */
+    width: 300px;
+}
+
+.skill-input-checkbox { /* This is the checkbox for each skill on the character sheet */
     height: 80px;
     width: 80px;
     border: 20px;
@@ -190,6 +194,14 @@ input.spell-concentration-input {
 .attribute-label {
     width: 250px;
     font-size: 50px;
+}
+
+.attribute-input { /* This is the input for attributes on the config page */
+    width: 300px;
+}
+
+.stat-input-display { /* This is the input for stats on the character sheet */
+    width: 100px;
 }
 
 input {

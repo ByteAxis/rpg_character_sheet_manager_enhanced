@@ -19,7 +19,7 @@ function displaySkills() {
             \
             <div class="form-group"> \
             <label class="skill-label" id="skill-label">' + localStorage.getItem("skillName" + i) + ': </label > \
-            <input class="skill-input" type="checkbox" ' + setChecked + ' onchange="updateSkillValues();" /> <br /> \
+            <input class="skill-input-checkbox" type="checkbox" ' + setChecked + ' onchange="updateSkillValues();" /> <br /> \
             </div> \
             \
             ');
